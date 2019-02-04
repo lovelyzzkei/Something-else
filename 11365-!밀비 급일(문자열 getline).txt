@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+string code;	// 암호를 받을 문자열
+
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+
+	getline(cin, code);
+	while (code != "END") {
+		for (int i = 0; i < code.length(); i++) {
+			cout << code[code.length() - 1 - i];
+		}
+		cout << "\n";
+		getline(cin, code);
+	}
+	return 0;
+}
