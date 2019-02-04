@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+vector<char> v;
+string name;
+
+int main() {
+	cin.tie(NULL);
+	ios::sync_with_stdio(false);
+
+	cin >> name;
+	v.push_back(name[0]);
+	for (int i = 1; i < name.length(); i++) {
+		if (name[i] == '-') {
+			v.push_back(name[i + 1]);
+		}
+	}
+
+	// Ãâ·Â
+	for (int i = 0; i < v.size(); i++) {
+		cout << v[i];
+	}
+	cout << "\n";
+	return 0;
+}
