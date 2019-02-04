@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int a, b, c, e = 1, s = 1, m = 1, year = 1;
+	cin >> a >> b >> c;
+	while (e != a || s != b || m != c) {
+		if (e == 15) { e = 0; }
+		if (s == 28) { s = 0; }
+		if (m == 19) { m = 0; }
+		e++;
+		s++;
+		m++;
+		year++;
+	}
+	cout << year << "\n";
+	return 0;
+}
